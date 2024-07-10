@@ -4,13 +4,19 @@ returns an array of the object's values only.
 */
 
 // Your code here 
-
-// const car = {
-//   make: 'Toyota',
-//   model: 'Corolla',
-//   year: 2011
-// }
-// console.log(getValues(car)); // ['Toyota', 'Corolla', 2011]
+function getValues(obj) {
+  let arr = [];
+  for (let keys in obj) {
+    arr.push(obj[keys]);
+  }
+  return arr;
+}
+const car = {
+  make: 'Toyota',
+  model: 'Corolla',
+  year: 2011
+}
+console.log(getValues(car)); // ['Toyota', 'Corolla', 2011]
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
