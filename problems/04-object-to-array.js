@@ -6,14 +6,21 @@ the value.
 */
 
 // Your code here 
-
-// let bootcamp = {
-//   name: "App Academy",
-//   color: "Red",
-//   population: 120
-// };
-// console.log(objectToArray(bootcamp));
-// //=> [['name', 'App Academy'], ['color', 'Red'], ['population', 120]]
+function objectToArray(obj) {
+  let arr = [];
+  for (let keys in obj) {
+    let smallArr = [keys, obj[keys]];
+    arr.push(smallArr);
+  }
+  return arr;
+}
+let bootcamp = {
+  name: "App Academy",
+  color: "Red",
+  population: 120
+};
+console.log(objectToArray(bootcamp));
+//=> [['name', 'App Academy'], ['color', 'Red'], ['population', 120]]
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
