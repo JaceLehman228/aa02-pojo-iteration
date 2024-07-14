@@ -5,10 +5,21 @@ the characters show up in the string as values.
 */
 
 function countCharacters(str) {
-  // Your code here 
+  let obj = {};
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let letters of str) {
+      if (str[i] === letters) {
+        count += 1;
+      }
+    }
+    obj[str[i]] = count;
+    count = 0;
+  }
+  return obj;
 }
 
-// console.log(countCharacters('hello')); // => { h: 1, e: 1, l: 2, o: 1}
+console.log(countCharacters('hello')); // => { h: 1, e: 1, l: 2, o: 1}
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
